@@ -56,7 +56,7 @@ def edit(request, post_id):
         # post.title = request.POST['title']
         post.body = request.POST['body']
         post.save()
-        return redirect('/detail/' + str(post_id))
+        return redirect('/detail/' + str(post_id) + '/')
 
     else:
         return render(request, 'edit.html')
