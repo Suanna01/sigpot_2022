@@ -6,6 +6,7 @@
 #   return render(request, "main.html")
 
 from datetime import timezone
+from multiprocessing.connection import answer_challenge
 from pdb import post_mortem
 from django.shortcuts import redirect, render, get_object_or_404
 from .forms import FreePostform, PostModelForm, CommentForm
@@ -16,23 +17,28 @@ def main(request):
     return render(request, 'main.html')
 
 def home(request):
-    freeposts = FreePost.objects.filter().order_by('-date')
-    return render(request, 'home.html', {'freeposts': freeposts})
+    return render(request, 'main.html')
 
 def search(request):
     return render(request, 'search.html')
+
 
 def board(request):
     freeposts = FreePost.objects.filter().order_by('-date')
     return render(request, 'board.html', {'freeposts': freeposts})
 
+
 def create(request):
     return render(request, 'create.html')
 
+
 def postcreate(request):
     post = FreePost()
-    post.body = request.GET['body']
     post.author = request.user
+    post.date = ""
+    post.body = request.GET['body']
+    post.time = ""
+    post.food = ""
     post.save()
     return redirect('/detail/' + str(post.id) + '/')
 

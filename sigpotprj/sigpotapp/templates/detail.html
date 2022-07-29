@@ -3,7 +3,7 @@
   <div class="container"> 
       <div class="card">
         <div class="card-body">
-          <!-- <h1>{{ post.title }}</h1> -->
+          <h1>{{ post.title }}</h1>
           <p>{{ post.pub_date }}</p>
           <p>{{ post.body }}</p> 
         </div>
@@ -23,7 +23,9 @@
   <p>{{comment.date}}</p>
   <hr>
   {% endfor %}  
+  {% if post.author.username == user.username %}
         <a href="{% url 'edit' post.id %}">수정하기</a>
         <a href="{% url 'delete' post.id %}">삭제하기</a>
+        {% endif %}
 
 {% endblock %}
