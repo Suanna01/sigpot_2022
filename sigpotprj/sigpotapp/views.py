@@ -31,7 +31,6 @@ def create(request):
 
 def postcreate(request):
     post = FreePost()
-    post.title = request.GET['title']
     post.body = request.GET['body']
     post.author = request.user
     post.save()
@@ -48,7 +47,7 @@ def edit(request, post_id):
     post = FreePost.objects.get(id=post_id)
 
     if request.method == "POST":
-        post.title = request.POST['title']
+        # post.title = request.POST['title']
         post.body = request.POST['body']
         post.save()
         return redirect('/detail/' + str(post_id))
