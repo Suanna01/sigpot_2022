@@ -8,7 +8,6 @@
 from datetime import timezone
 from pdb import post_mortem
 from django.shortcuts import redirect, render, get_object_or_404
-from requests import RequestException
 from .forms import FreePostform, PostModelForm, CommentForm
 from .models import FreePost
 
