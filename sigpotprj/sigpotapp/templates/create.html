@@ -1,61 +1,64 @@
 <html>
 
-<<<<<<< HEAD
   <head>
       {% load static %}
       <link rel="stylesheet" href={% static './css/create.css' %}>
   </head>
   <body>
-=======
-	<head>
-		{% load static %}
-		<link rel="stylesheet" href={% static './css/main.css' %}>
-	</head>
-	<body>
->>>>>>> adcb53fc5810275f6a9d0765ed7b7802554c88f9
 		{% include 'nav.html' %}
 		{% block content %}
 		<div class="choice">
+			<hr class="line1">
 			<div class="ment1">
-				<hr class="line">
 					필요한 식팟을 직접 모아보세요
-				<hr class="line">
 			</div>
+			<hr class="line1">
+			
 		</div>
+			<div class="outbox1">
+				<div class="inner1">
+					<div class="ment2">희망 식사 시간</div>
+					<div class="ment3">식팟과 함께 히고 싶은 시간대를 설정해 주세요.</div>
+				</div>
+				<label>오전<input class="ampm" type="radio" name="ampm" value="am"></label>
+            	<label>오후<input class="ampm" type="radio" name="ampm" value="pm"></label>
+                <div class="timediv">
+                    <input type="number" class="time" max='12'>
+                    <span> : </span>
+                    <input type="number" class="time" max='60'>
+                </div >
+                <span>~</span>
+                <div  class="timediv">
+                    <input type="number" class="time" max='12'>
+                    <span> : </span>
+                    <input type="number" class="time" max='60'>
+                </div >
+                <span class="or"> or </span>
+                <span class="foodType">상관없어요</span>
+            
+			<div class="inner1">
+				<div class="ment2">희망메뉴</div>
+				<div class="ment3">식팟과 함께 먹고 싶은 메뉴를 모두 선택해 주세요.</div>
+			</div>
+            <label>전체<input type="checkbox"></label>
+			<label>중식<input type="checkbox"></label>
+			<label>양식<input type="checkbox"></label>
+			<label>분식<input type="checkbox"></label>
+			<label>아시안<input type="checkbox"></label>
+			<label>디저트<input type="checkbox"></label>
+			<label>카페<input type="checkbox"></label>
+			<label>패스트푸드<input type="checkbox"></label>
+			<label>편의점<input type="checkbox"></label>
+			<label>기타<input type="checkbox"></label>
+        </div>
+	</div>
+		</div>
+
 		<div class="container">
 			<form action="{% url 'postcreate' %}">
-<<<<<<< HEAD
 			<textarea cols=40 rows=10 name="body" placeholder="글을 작성해주세요"></textarea>
 			<input class="submitbtn" type="submit" value="글 올리기">
 		</form>
-=======
-				<!-- <h4>제목: </h4>
-				<input type="text" name="title">
-				<br> -->
-				<br>
-				<h4>본문: </h4>
-				<textarea cols=40 rows=10 name="body"></textarea>
-				<br>
-				<br>
-				<input class="btn btn-dark" type="submit" value="글쓰기">
-				<h4 class="smallname">희망메뉴</h4>
-				<!-- <form action="/check/{{check.id}}/" method="post"> -->
-					<p class="plus">식팟과 함께 먹고 싶은 메뉴를 모두 선택해 주세요.</p>
-					<div>
-					<input type="checkbox" name="answer[]" id="answer1" value="1">
-						<label for="answer1">한식</label>
-					</div>
-					<div>
-					<input type="checkbox" name="answer[]" id="answer2" value="2">
-						<label for="answer2">중식</label>
-					</div>
-					<div>
-					<input type="checkbox" name="answer[]" id="answer3" value="3">
-					<label for="answer3">일식</label>
-					</div>
-				<!-- </form> -->
-			</form>
->>>>>>> adcb53fc5810275f6a9d0765ed7b7802554c88f9
 		</div>
 		{% include 'footer.html' %}
 		{% endblock %}

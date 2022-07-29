@@ -29,9 +29,57 @@ textarea{
 .submitbtn:hover{
     background-color: #FFB400;
 }
-
-.line{
+.line1{
     width: 326px;
     height: 0px;
-    border: 1px solid #FFB800;
+    border-bottom: 1px solid #FFB800;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.choice{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ment1{
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ment2{
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: 600;
+}
+.ment3{
+    font-family: Pretendard;
+    font-size: 13px;
+    color:#DEDEDE;
+}
+.outbox{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.outbox1{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+} 
+
+.inner2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }

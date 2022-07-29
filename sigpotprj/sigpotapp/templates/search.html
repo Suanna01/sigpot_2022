@@ -18,36 +18,34 @@
             <label>오전<input class="ampm" type="radio" name="ampm" value="am"></label>
             <label>오후<input class="ampm" type="radio" name="ampm" value="pm"></label>
                 <div class="timediv">
-                    <input type="number" class="time" max='12'>
+                    <input type="number" class="time" max='60'>
                     <span> : </span>
                     <input type="number" class="time" max='60'>
                 </div >
                 <span>~</span>
                 <div  class="timediv">
-                    <input type="number" class="time" max='12'>
+                    <input type="number" class="time" max='60'>
                     <span> : </span>
                     <input type="number" class="time" max='60'>
                 </div >
                 <span class="or"> or </span>
                 <span class="foodType">상관없어요</span>
             </div>
-            <h4 class="smallname">희망메뉴</h4>
-            <p class="plus">식팟과 함께 먹고 싶은 메뉴를 모두 선택해 주세요.</p>
-            <div class="foodType">전체</div>
-            <div class="foodType">한식</div>
-            <div class="foodType">중식</div>
-            <div class="foodType">양식</div>
-            <div class="foodType">분식</div>
-            <div class="foodType">아시안</div>
-            <br/>
-            <div class="foodType">디저트</div>
-            <div class="foodType">카페</div>
-            <div class="foodType">패스트푸드</div>
-            <div class="foodType">편의점</div>
-            <div class="foodType">기타</div>
-            <div class="foodType">상관없어요</div>
-        </div>
-        <h2 class="gobtn">나와 딱 맞는 식팟 찾으러 가기</h2>
+            <div class="inner1">
+				<div class="ment2">희망메뉴</div>
+				<div class="ment3">식팟과 함께 먹고 싶은 메뉴를 모두 선택해 주세요.</div>
+			</div>
+            <label>전체<input type="checkbox"></label>
+			<label>중식<input type="checkbox"></label>
+			<label>양식<input type="checkbox"></label>
+			<label>분식<input type="checkbox"></label>
+			<label>아시안<input type="checkbox"></label>
+			<label>디저트<input type="checkbox"></label>
+			<label>카페<input type="checkbox"></label>
+			<label>패스트푸드<input type="checkbox"></label>
+			<label>편의점<input type="checkbox"></label>
+			<label>기타<input type="checkbox"></label>
+        <h2 class="gobtn"><a href="{% url 'board' %}">나와 딱 맞는 식팟 찾으러 가기</a></h2>
     </div>
     <script src={% static './js/search.js' %}></script>
     {% include 'footer.html' %}
