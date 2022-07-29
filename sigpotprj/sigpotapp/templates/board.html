@@ -2,30 +2,14 @@
 
   <head>
       {% load static %}
-      <link rel="stylesheet" href={% static './css/main.css' %}>
+      <link rel="stylesheet" href={% static './css/board.css' %}>
   </head>
   <body>
     {% include 'nav.html' %}
+    <div class="outbox">
+    <button class="sbtn"> <a href="{% url 'search' %}" class="ment5">검색하기</a></button>
+    </div>
     <!--게시글 리스트-->
-<<<<<<< HEAD
-  <table>
-    <thead>
-      <tr>
-        <th>날짜</th>
-        <th>작성자</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for post in freeposts %}
-      <tr>
-        <td>{{ post.date }}</td>
-        <td><a href="{% url 'detail' post.id %}"> {{ post.body }}</a></td>
-        <td>{{ post.author.username }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-=======
     <table>
       <thead>
         <tr>
@@ -48,7 +32,6 @@
         {% endfor %}
       </tbody>
     </table>
->>>>>>> adcb53fc5810275f6a9d0765ed7b7802554c88f9
     {% include 'footer.html' %}
   </body>
 </html>

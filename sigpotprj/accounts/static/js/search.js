@@ -1,4 +1,4 @@
-const foodType= document.querySelector(".foodType");
+const foodType= document.querySelectorAll(".foodType");
 function HandleClick(){
     console.group("test");
         foodType.style.backgroundColor = "#FFB800";

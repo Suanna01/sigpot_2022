@@ -16,8 +16,10 @@ from .models import FreePost
 def main(request):
     return render(request, 'main.html')
 
+
 def home(request):
     return render(request, 'main.html')
+
 
 def search(request):
     return render(request, 'search.html')

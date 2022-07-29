@@ -1,0 +1,23 @@
+.sbtn{
+    width: 50%;
+    margin-bottom: 5%;
+    border-radius: 2em;
+    border: none;
+    padding: 15px;
+    background-color: #FFB400;
+}
+
+.ment5{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.outbox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{margin: 0;}
