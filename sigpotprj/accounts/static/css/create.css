@@ -29,3 +29,9 @@ textarea{
 .submitbtn:hover{
     background-color: #FFB400;
 }
+
+.line{
+    width: 326px;
+    height: 0px;
+    border: 1px solid #FFB800;
+}

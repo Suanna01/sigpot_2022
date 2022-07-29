@@ -7,6 +7,13 @@
   <body>
 		{% include 'nav.html' %}
 		{% block content %}
+		<div class="choice">
+			<div class="ment1">
+				<hr class="line">
+					필요한 식팟을 직접 모아보세요
+				<hr class="line">
+			</div>
+		</div>
 		<div class="container">
 			<form action="{% url 'postcreate' %}">
 			<textarea cols=40 rows=10 name="body" placeholder="글을 작성해주세요"></textarea>
