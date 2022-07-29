@@ -65,7 +65,7 @@ def edit(request, post_id):
 def delete(request, post_id):
     post = FreePost.objects.get(id=post_id)
     post.delete()
-    return redirect('/')
+    return redirect('/board/')
 
 
 def create_comment(request, post_id):
