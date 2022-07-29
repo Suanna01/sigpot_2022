@@ -25,8 +25,9 @@ def logout(request):
 #회원가입
 def signup(request):
     if request.method == "POST":
-        if request.POST['password'] == request.POST['repeat']:
-            new_user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'])
-            auth.login(request, new_user)
-            return redirect('main')
+        if request.POST['email'] == "swu.ac.kr" or "sungshin.ac.kr" or "ewhain.net" or "sookmyung.ac.kr" or "dongduk.ac.kr" or "duksung.ac.kr" :
+            if request.POST['password'] == request.POST['repeat']:
+                new_user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'], email=request.POST['username'] +'@' +request.POST['email'])
+                auth.login(request, new_user)
+                return redirect('main')
     return render(request, 'signup.html')

@@ -10,7 +10,6 @@
   <table>
     <thead>
       <tr>
-        <th>제목</th>
         <th>날짜</th>
         <th>작성자</th>
       </tr>
@@ -18,8 +17,8 @@
     <tbody>
       {% for post in freeposts %}
       <tr>
-        <td><a href="{% url 'detail' post.id %}"> {{ post.title }}</a></td>
         <td>{{ post.date }}</td>
+        <td>{{ post.author.username }}</td>
         <td>{{ post.author.username }}</td>
       </tr>
       {% endfor %}

@@ -15,23 +15,22 @@ from .models import FreePost
 def main(request):
     return render(request, 'main.html')
 
+def home(request):
+    freeposts = FreePost.objects.filter().order_by('-date')
+    return render(request, 'home.html', {'freeposts': freeposts})
 
 def search(request):
     return render(request, 'search.html')
-
 
 def board(request):
     freeposts = FreePost.objects.filter().order_by('-date')
     return render(request, 'board.html', {'freeposts': freeposts})
 
-
 def create(request):
     return render(request, 'create.html')
 
-
 def postcreate(request):
     post = FreePost()
-    post.title = request.GET['title']
     post.body = request.GET['body']
     post.author = request.user
     post.save()
@@ -48,7 +47,7 @@ def edit(request, post_id):
     post = FreePost.objects.get(id=post_id)
 
     if request.method == "POST":
-        post.title = request.POST['title']
+        # post.title = request.POST['title']
         post.body = request.POST['body']
         post.save()
         return redirect('/detail/' + str(post_id))

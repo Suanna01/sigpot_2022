@@ -1,0 +1,41 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href={% static './css/main.css' %}>
+    </head>
+    <body>
+
+        <h1>home</h1>
+
+        <div>{{user.username }}</div>
+        <div>로그아웃</div>
+
+        <h1>{{time}}</h1>
+    </br>
+    </br>
+    </br>
+        <!--게시글 리스트-->
+            <table>
+                <thead>
+                <tr>
+                    <th>내용</th>
+                    <th>작성자</th>
+                    <th>작성일시</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for post in freeposts %}
+                <tr>
+                    <td>{{ post.body }}</td>
+                    <td>{{ post.author.username }}</td>
+                    <td>{{ post.date }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </br>
+        </br>
+        </br>
+            {% include 'footer.html' %}
+    </body>
+</html>
