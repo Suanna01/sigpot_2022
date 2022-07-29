@@ -22,7 +22,7 @@
         <tr>
           <td>{{ post.author.username }}</td>
           <td>{{ post.date }}</td>
-          <td>{{ post.body }}</td>
+          <td><a href="{% url 'detail' post.id %}"> {{ post.body }}</a></td>
           <td>{{ post.time }}</td>
           <td>{{ post.food }}</td>
         </tr>

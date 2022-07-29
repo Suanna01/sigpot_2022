@@ -56,7 +56,7 @@ def edit(request, post_id):
         # post.title = request.POST['title']
         post.body = request.POST['body']
         post.save()
-        return redirect('/detail/' + str(post_id))
+        return redirect('/detail/' + str(post_id) + '/')
 
     else:
         return render(request, 'edit.html')
@@ -65,7 +65,7 @@ def edit(request, post_id):
 def delete(request, post_id):
     post = FreePost.objects.get(id=post_id)
     post.delete()
-    return redirect('/')
+    return redirect('/board/')
 
 
 def create_comment(request, post_id):
