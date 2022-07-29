@@ -1,0 +1,54 @@
+<html>
+<head>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href={% static './css/search.css' %}>
+    </head>
+</head>
+<body>
+    <hr/>
+    <div  class="container">
+        <div>
+            
+            <h2 class="bigname"><hr class="line" width="30%" align="left">나와 딱 맞는 식팟을 찾아보세요<hr class="line" width="30%" align="right"></h2>
+            
+            <h4 class="smallname">희망 식사 시간</h4>
+            <p class="plus">식팟과 함께 하고 싶은 시간대를 설정해 주세요.</p>
+            <div>
+            <label>오전<input class="ampm" type="radio" name="ampm" value="am"></label>
+            <label>오후<input class="ampm" type="radio" name="ampm" value="pm"></label>
+                <div class="timediv">
+                    <input type="number" class="time" max='12'>
+                    <span> : </span>
+                    <input type="number" class="time" max='60'>
+                </div >
+                <span>~</span>
+                <div  class="timediv">
+                    <input type="number" class="time" max='12'>
+                    <span> : </span>
+                    <input type="number" class="time" max='60'>
+                </div >
+                <span class="or"> or </span>
+                <span class="foodType">상관없어요</span>
+            </div>
+            <h4 class="smallname">희망메뉴</h4>
+            <p class="plus">식팟과 함께 먹고 싶은 메뉴를 모두 선택해 주세요.</p>
+            <div class="foodType">전체</div>
+            <div class="foodType">한식</div>
+            <div class="foodType">중식</div>
+            <div class="foodType">양식</div>
+            <div class="foodType">분식</div>
+            <div class="foodType">아시안</div>
+            <br/>
+            <div class="foodType">디저트</div>
+            <div class="foodType">카페</div>
+            <div class="foodType">패스트푸드</div>
+            <div class="foodType">편의점</div>
+            <div class="foodType">기타</div>
+            <div class="foodType">상관없어요</div>
+        </div>
+        <h2 class="gobtn">나와 딱 맞는 식팟 찾으러 가기</h2>
+    </div>
+    <script src={% static './js/search.js' %}></script>
+</body>
+</html>

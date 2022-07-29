@@ -1,0 +1,95 @@
+.foodType {
+    align-items: center;
+    text-align: center;
+    border: 3px solid #FFB800;
+    color: #FFB800;
+    display: flex;
+    margin-right: 28px;
+    margin-left: auto;
+    margin-bottom: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+    height: 64px;
+    border-radius: 200px;
+    font-size: 28px;
+}
+
+.or {
+    color: #DEDEDE;
+    font-size: 28px;
+}
+
+.foodType:hover {
+    background-color: #FFB800;
+    color: white;
+  }
+
+.smallname {
+    font-size: 30px;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.ampm {
+    color: #FFB800;
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+.gobtn {
+    height: 80px;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    background-color: #DEDEDE;
+    border-radius: 200px;
+    align-items: center;
+}
+
+.gobtn:hover {
+    background-color: #FFB800;
+    color: white;
+}
+
+.bigname {
+    height: 43px;
+    color: #181818;
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+}
+
+.time { 
+    width: 53px;
+    align-items: center;
+    border:none;
+    padding: 15px;
+    text-align: center;
+}
+
+.timediv {
+    width: 293px;
+    border: 3px solid #FFB800;
+    border-radius: 150px;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+}
+
+.plus {
+    color: #DEDEDE;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.line {
+    display: inline-block;
+    background-color: #FFB800;
+}

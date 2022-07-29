@@ -13,12 +13,16 @@ from .models import FreePost
 
 
 def main(request):
-    freeposts = FreePost.objects.filter().order_by('-date')
-    return render(request, 'main.html', {'freeposts': freeposts})
+    return render(request, 'main.html')
+
+
+def search(request):
+    return render(request, 'search.html')
 
 
 def board(request):
-    return render(request, 'board.html')
+    freeposts = FreePost.objects.filter().order_by('-date')
+    return render(request, 'board.html', {'freeposts': freeposts})
 
 
 def create(request):
@@ -26,20 +30,18 @@ def create(request):
 
 
 def postcreate(request):
-    freeposts = FreePost.objects.filter().order_by('-date')
-    if request.method == 'GET':
-        post = FreePost()
-        post.title = request.GET['title']
-        post.body = request.GET['body']
-        post.author = request.user
-        post.save()
-    return render(request, 'main.html', {'freeposts':freeposts})
-    
+    post = FreePost()
+    post.title = request.GET['title']
+    post.body = request.GET['body']
+    post.author = request.user
+    post.save()
+    return redirect('/detail/' + str(post.id) + '/')
+
 
 def detail(request, post_id):
     post_detail = get_object_or_404(FreePost, pk=post_id)
     comment_form = CommentForm()
-    return render(request, 'detail.html', {'post': post_detail, 'comment_form':comment_form})
+    return render(request, 'detail.html', {'post': post_detail, 'comment_form': comment_form})
 
 
 def edit(request, post_id):
@@ -60,11 +62,12 @@ def delete(request, post_id):
     post.delete()
     return redirect('/')
 
-def create_comment(request, post_id):
-    filled_form = CommentForm(request.POST) 
 
-    if filled_form.is_valid():    
+def create_comment(request, post_id):
+    filled_form = CommentForm(request.POST)
+
+    if filled_form.is_valid():
         finished_form = filled_form.save(commit=False)
         finished_form.post = get_object_or_404(FreePost, pk=post_id)
         finished_form.save()
-        return redirect('/detail/' + str(post_id) + '/');
+        return redirect('/detail/' + str(post_id) + '/')
