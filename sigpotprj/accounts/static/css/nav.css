@@ -10,12 +10,20 @@
     justify-content: space-between;
     align-items: center;
 }
+.logo{
+  width: 20%;
+}
+.logo1{
+  margin-left: 13%;
+  width: 70%;
+}
 
 .menu{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 30%;
+    font-size: 18px;
 }
 .menuselect:link {
     color : black;
@@ -35,7 +43,11 @@
   }
 
 .login{
-    width: 15%;
+    width: 20%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+
 }
 .loginmenu:link {
     color : #FFB800;
@@ -65,5 +77,24 @@
   }
 .signupmenu:hover {
     text-decoration: none;
-    color : black;
+    color : #FFB800;
   }
+
+  
+.name{
+  margin-right: 5%;
+}
+.logout:link {
+  color : black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.logout:visited {
+  color : black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.logout:hover {
+  text-decoration: none;
+  color : #FFB800;
+}

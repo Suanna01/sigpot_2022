@@ -6,10 +6,10 @@
     </head>
 </head>
 <body>
+    {% include 'nav.html' %}
     <hr/>
-    <div  class="container">
+    <div class="container">
         <div>
-            
             <h2 class="bigname"><hr class="line" width="30%" align="left">나와 딱 맞는 식팟을 찾아보세요<hr class="line" width="30%" align="right"></h2>
             
             <h4 class="smallname">희망 식사 시간</h4>
@@ -50,5 +50,6 @@
         <h2 class="gobtn">나와 딱 맞는 식팟 찾으러 가기</h2>
     </div>
     <script src={% static './js/search.js' %}></script>
+    {% include 'footer.html' %}
 </body>
 </html>

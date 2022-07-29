@@ -1,20 +1,19 @@
 <html>
-    <head>
-        {% load static %}
-        <link rel="stylesheet" href={% static './css/main.css' %}>
-    </head>
-    <body>
+  <head>
+      {% load static %}
+      <link rel="stylesheet" href={% static './css/home.css' %}>
+  </head>
 
-        <h1>home</h1>
-
-        <div>{{user.username }}</div>
-        <div>로그아웃</div>
-
+  <body>
+    {% include 'nav.html' %}
+    {% if user.is_authenticated %}
         <h1>{{time}}</h1>
-    </br>
-    </br>
-    </br>
         <!--게시글 리스트-->
+        <div class="leftbox">
+
+        </div>
+        <div class="rightbox">
+            <div class="search"></div>
             <table>
                 <thead>
                 <tr>
@@ -33,9 +32,10 @@
                 {% endfor %}
                 </tbody>
             </table>
-        </br>
-        </br>
-        </br>
-            {% include 'footer.html' %}
+        </div>
+        {% include 'footer.html' %}
+        {% else %}
+
+        {% endif %}
     </body>
 </html>

@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+textarea{
+    width: 70%;
+    border-radius: 10px;
+    border: 1px solid #FFB400;
+    margin-bottom: 2%;
+    padding: 2% 0% 0% 2%;
+}
+
+.submitbtn{
+    width: 70%;
+    padding: 0.8% 0% 0.8% 0%;
+    border-radius: 100px;
+    background-color: #DEDEDE;
+    border: none;
+    color: white;
+    font-family: Pretendard;
+    font-size: 18px;
+}
+
+.submitbtn:hover{
+    background-color: #FFB400;
+}
+
+.line{
+    width: 326px;
+    height: 0px;
+    border: 1px solid #FFB800;
+}

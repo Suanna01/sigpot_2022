@@ -1,5 +1,7 @@
 from django import forms
+from matplotlib import widgets
 from .models import FreePost, Comment
+
 
 class FreePostform(forms.ModelForm):
     class Meta:
@@ -7,7 +9,7 @@ class FreePostform(forms.ModelForm):
         fields = ['body']
 
         # fields = ['title', 'body']
-    
+
     def __init__(self, *arg, **kwargs):
         super(FreePostform, self).__init__(*arg, **kwargs)
 
@@ -18,9 +20,9 @@ class FreePostform(forms.ModelForm):
         # }
         self.fields['body'].widget.attrs = {
             'class': 'form-control',
-            'placeholder':"글 제목을 입력해주세요",
+            'placeholder': "글 제목을 입력해주세요",
             'row': 20,
-            'cols' : 100
+            'cols': 100
         }
 
 
@@ -29,6 +31,7 @@ class PostModelForm(forms.ModelForm):
         model = FreePost
         # fields = ['title', 'body']
         fields = ['body']
+
 
 class CommentForm(forms.ModelForm):
     class Meta:

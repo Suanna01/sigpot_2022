@@ -12,6 +12,16 @@
       <div class="card">
         <div class="card-body">
           <!-- <h1>{{ post.title }}</h1> -->
+<<<<<<< HEAD
+          <p>{{ post.pub_date }}</p>
+          <p>{{ post.body }}</p> 
+        </div>
+        </div>
+        <br>
+
+        <a href="{% url 'edit' post.id %}">수정하기</a>
+        <a href="{% url 'delete' post.id %}">삭제하기</a>
+=======
           <!--<p>{{ post.pub_date }}</p>-->
           <div class="firstbox">
             <div class="username">{{ post.author.username }}</div>
@@ -44,6 +54,7 @@
   <hr>
   {% endfor %}  
   </div>
+>>>>>>> adcb53fc5810275f6a9d0765ed7b7802554c88f9
 
 {% endblock %}
 {% include 'footer.html' %}

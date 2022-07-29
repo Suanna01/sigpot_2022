@@ -1,14 +1,34 @@
 <html>
 
+<<<<<<< HEAD
+  <head>
+      {% load static %}
+      <link rel="stylesheet" href={% static './css/create.css' %}>
+  </head>
+  <body>
+=======
 	<head>
 		{% load static %}
 		<link rel="stylesheet" href={% static './css/main.css' %}>
 	</head>
 	<body>
+>>>>>>> adcb53fc5810275f6a9d0765ed7b7802554c88f9
 		{% include 'nav.html' %}
 		{% block content %}
+		<div class="choice">
+			<div class="ment1">
+				<hr class="line">
+					필요한 식팟을 직접 모아보세요
+				<hr class="line">
+			</div>
+		</div>
 		<div class="container">
 			<form action="{% url 'postcreate' %}">
+<<<<<<< HEAD
+			<textarea cols=40 rows=10 name="body" placeholder="글을 작성해주세요"></textarea>
+			<input class="submitbtn" type="submit" value="글 올리기">
+		</form>
+=======
 				<!-- <h4>제목: </h4>
 				<input type="text" name="title">
 				<br> -->
@@ -35,6 +55,7 @@
 					</div>
 				<!-- </form> -->
 			</form>
+>>>>>>> adcb53fc5810275f6a9d0765ed7b7802554c88f9
 		</div>
 		{% include 'footer.html' %}
 		{% endblock %}
