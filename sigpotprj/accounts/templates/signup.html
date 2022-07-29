@@ -9,7 +9,7 @@
             <div class="signupbox">
                 <div class="textbox">
                     <div class="signment">회원가입 하기</div>
-                    <div class="already">이미 계정이 있으신가요? <a href class="gologin">로그인 하기</a></div>
+                    <div class="already">이미 계정이 있으신가요? <a href="{% url 'login' %}" class="gologin">로그인 하기</a></div>
                     <form method="POST">
                         {% csrf_token %}
                         <div>

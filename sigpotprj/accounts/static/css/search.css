@@ -1,4 +1,7 @@
-.foodType {
+body{
+    margin: 0;
+}
+/* .foodType {
     align-items: center;
     text-align: center;
     border: 3px solid #FFB800;
@@ -87,9 +90,9 @@
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
+} */
 
-.line {
+/* .line {
     display: inline-block;
     background-color: #FFB800;
-}
+} */

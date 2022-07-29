@@ -1,28 +1,16 @@
 {% block content %}
 
-  <div class="container"> 
-      <div class="card">
-        <div class="card-body">
-          <h1>{{ post.title }}</h1>
-          <p>{{ post.pub_date }}</p>
-          <p>{{ post.body }}</p> 
+    <div class="container"> 
+        <div class="card">
+          <div class="card-body">
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.pub_date }}</p>
+            <p>{{ post.body }}</p> 
+          </div>
         </div>
-      </div>
-  </div>  
-  <br>
+        </div>
+        <br>
 
-  <!--댓글 입력 공간-->
-  <form method="post" action="{% url 'create_comment' post.id %}">
-    {%csrf_token%}
-    {{comment_form}}
-    <input type="submit" value="댓글 입력">
-  </form>
-
-  {% for comment in post.comment_set.all %}
-  <p>{{comment}}</p>
-  <p>{{comment.date}}</p>
-  <hr>
-  {% endfor %}  
         <a href="{% url 'edit' post.id %}">수정하기</a>
         <a href="{% url 'delete' post.id %}">삭제하기</a>
 

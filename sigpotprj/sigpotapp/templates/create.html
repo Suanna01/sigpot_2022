@@ -2,22 +2,15 @@
 
   <head>
       {% load static %}
-      <link rel="stylesheet" href={% static './css/main.css' %}>
+      <link rel="stylesheet" href={% static './css/create.css' %}>
   </head>
   <body>
 		{% include 'nav.html' %}
 		{% block content %}
 		<div class="container">
 			<form action="{% url 'postcreate' %}">
-			<h4>제목: </h4>
-			<input type="text" name="title">
-			<br>
-			<br>
-			<h4>본문: </h4>
-			<textarea cols=40 rows=10 name="body"></textarea>
-			<br>
-			<br>
-			<input class="btn btn-dark" type="submit" value="글쓰기">
+			<textarea cols=40 rows=10 name="body" placeholder="글을 작성해주세요"></textarea>
+			<input class="submitbtn" type="submit" value="글 올리기">
 		</form>
 		</div>
 		{% include 'footer.html' %}

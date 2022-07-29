@@ -17,6 +17,7 @@
         <!--현재 로그인한 유저-->
         {% if user.is_authenticated %}
         {{user.username}}
+        <a href="{% url 'logout' %}" class="logout">로그아웃</a>
         {% else %}
         <a href="{% url 'login' %}" class="loginmenu">로그인</a>
         <a href="{% url 'signup' %}" class="signupmenu">회원가입</a>
