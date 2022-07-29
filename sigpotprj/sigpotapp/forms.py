@@ -37,5 +37,4 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['comment']
-        widgets = {
-        }
+        # fields = ['title', 'body']

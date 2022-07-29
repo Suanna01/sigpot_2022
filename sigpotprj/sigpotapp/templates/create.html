@@ -1,10 +1,18 @@
 <html>
 
+<<<<<<< HEAD
   <head>
       {% load static %}
       <link rel="stylesheet" href={% static './css/create.css' %}>
   </head>
   <body>
+=======
+	<head>
+		{% load static %}
+		<link rel="stylesheet" href={% static './css/main.css' %}>
+	</head>
+	<body>
+>>>>>>> adcb53fc5810275f6a9d0765ed7b7802554c88f9
 		{% include 'nav.html' %}
 		{% block content %}
 		<div class="choice">
@@ -16,10 +24,40 @@
 		</div>
 		<div class="container">
 			<form action="{% url 'postcreate' %}">
+<<<<<<< HEAD
 			<textarea cols=40 rows=10 name="body" placeholder="글을 작성해주세요"></textarea>
 			<input class="submitbtn" type="submit" value="글 올리기">
 		</form>
+=======
+				<!-- <h4>제목: </h4>
+				<input type="text" name="title">
+				<br> -->
+				<br>
+				<h4>본문: </h4>
+				<textarea cols=40 rows=10 name="body"></textarea>
+				<br>
+				<br>
+				<input class="btn btn-dark" type="submit" value="글쓰기">
+				<h4 class="smallname">희망메뉴</h4>
+				<!-- <form action="/check/{{check.id}}/" method="post"> -->
+					<p class="plus">식팟과 함께 먹고 싶은 메뉴를 모두 선택해 주세요.</p>
+					<div>
+					<input type="checkbox" name="answer[]" id="answer1" value="1">
+						<label for="answer1">한식</label>
+					</div>
+					<div>
+					<input type="checkbox" name="answer[]" id="answer2" value="2">
+						<label for="answer2">중식</label>
+					</div>
+					<div>
+					<input type="checkbox" name="answer[]" id="answer3" value="3">
+					<label for="answer3">일식</label>
+					</div>
+				<!-- </form> -->
+			</form>
+>>>>>>> adcb53fc5810275f6a9d0765ed7b7802554c88f9
 		</div>
 		{% include 'footer.html' %}
 		{% endblock %}
 	</body>
+</html>

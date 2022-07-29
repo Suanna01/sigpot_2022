@@ -25,17 +25,21 @@
   <table>
     <thead>
       <tr>
-        <!-- <th>제목</th> -->
-        <th>날짜</th>
-        <th>작성자</th>
+        <th>아이디</th>
+        <th>작성일자</th>
+        <th>내용</th>
+        <th>밥먹을시간</th>
+        <th>밥</th>
       </tr>
     </thead>
     <tbody>
       {% for post in freeposts %}
       <tr>
-        <!-- <td><a href="{% url 'detail' post.id %}"> {{ post.title }}</a></td> -->
-        <td>{{ post.date }}</td>
         <td>{{ post.author.username }}</td>
+        <td>{{ post.date }}</td>
+        <td>{{ post.body }}</td>
+        <td>{{ post.time }}</td>
+        <td>{{ post.food }}</td>
       </tr>
       {% endfor %}
     </tbody>

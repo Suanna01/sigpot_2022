@@ -1,0 +1,81 @@
+.textdetail {
+    width: 100%;
+    margin: auto;
+    font-size: 24px;
+}
+
+.commentlist {
+    width: 80%;
+    margin: auto;
+    border: 2px solid #FFB800;
+    padding: 3%;   
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.commentinput {
+    width: 80%;
+    margin: auto;
+    border: 2px solid #FFB800;
+    padding: 1% 3% 0% 3%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.commentup {
+    width: 8%;
+    border: 2px solid #FFB800;
+    background-color: #FFB800;
+    color:#FFFFFF;
+    margin-left: 20px;
+    margin-bottom: 13px;
+    border-radius: 15px;
+}
+
+.deletechange {
+    width: 90%;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #5A5A5A;
+}
+.container{
+    width: 80%;
+    margin:0 auto;
+}
+.firstbox{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.username{
+    width: 100%;
+    margin: auto;
+    font-size: 24px;
+}
+
+.writingtime{
+    width: 100%;
+    margin: auto;
+    font-size: 18px;
+    color: #5A5A5A;
+    margin-bottom: 10px;
+}
+textarea{
+    width: 85%;
+    height: 3%;
+    border: none;
+    resize: none;
+}
+
+label {
+    display: none;
+}

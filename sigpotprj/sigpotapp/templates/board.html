@@ -7,6 +7,7 @@
   <body>
     {% include 'nav.html' %}
     <!--게시글 리스트-->
+<<<<<<< HEAD
   <table>
     <thead>
       <tr>
@@ -24,6 +25,30 @@
       {% endfor %}
     </tbody>
   </table>
+=======
+    <table>
+      <thead>
+        <tr>
+          <th>아이디</th>
+          <th>작성일자</th>
+          <th>내용</th>
+          <th>밥먹을시간</th>
+          <th>밥</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in freeposts %}
+        <tr>
+          <td>{{ post.author.username }}</td>
+          <td>{{ post.date }}</td>
+          <td>{{ post.body }}</td>
+          <td>{{ post.time }}</td>
+          <td>{{ post.food }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+>>>>>>> adcb53fc5810275f6a9d0765ed7b7802554c88f9
     {% include 'footer.html' %}
   </body>
 </html>
