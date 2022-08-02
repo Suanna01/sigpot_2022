@@ -29,11 +29,6 @@
 
 ![Frame 316](https://user-images.githubusercontent.com/86403488/182464405-9d25bc91-b9cc-45e6-a1fd-a02fc8d73446.png)
 
-- 게시글 전체 보기
-
-![Frame 316](https://user-images.githubusercontent.com/86403488/182464448-cf8d0c5f-03c3-436b-b951-e3d2cba0771f.png)
-
-
 - 글 작성하기, 밥 먹을 시간, 원하는 음식 종류 해시태그
 
 ![Frame 322](https://user-images.githubusercontent.com/86403488/182464637-bfcfaa60-ecac-480a-ba15-0be01a47307b.png)
